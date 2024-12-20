@@ -40,6 +40,7 @@ routerCart.post('/:cid/products/:pid', (req, res, next)=>{
         return res.status(404).send("no existe el carrito al que desea agregar los productos, por favor ingrese el id correcto")
     }
 
+    
     const addProd = {
         product: prodID,
         quantity: quantity

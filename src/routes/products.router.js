@@ -31,6 +31,7 @@ routerProds.get('/', (req, res, next)=>{
     res.status(200).send(prodsFiltrados)
 })
 
+
 routerProds.get('/:pid', (req, res)=>{
     const productId = req.params.pid 
     const producto = products.find(prod => prod.id === productId)
