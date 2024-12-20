@@ -1,0 +1,41 @@
+[{
+    "title": "Bicicleta Absolute Nero 3",
+    "description": "Bicicleta marca Absolute, aro 29, color azul",
+    "code": "codigo de la bicicleta?",
+    "price": 1000,
+    "status": true,
+    "stock": 8,
+    "category": "aro 29"
+},{
+    "title": "Bicicleta Absolute Nero 5",
+    "description": "Bicicleta marca Absolute, aro 29, color negro",
+    "code": "no se bien que sería el codigo jajaj",
+    "price": 1500,
+    "status": true,
+    "stock": 15,
+    "category": "aro 29"
+},{
+    "title": "Bicicleta Oggi wild",
+    "description": "Bicicleta marca Oggi, aro 26, color gris",
+    "code": "no tiene codigo, es robada",
+    "price": 900,
+    "status": true,
+    "stock": 2,
+    "category": "aro 26"
+},{
+    "title": "Bicicleta Alfameq Rhino",
+    "description": "Bicicleta marca Alfameq, aro 26, color azul",
+    "code": "codigo tipazo",
+    "price": 1300,
+    "status": true,
+    "stock": 7,
+    "category": "aro 26"
+},{
+    "title": "Bicicleta Oggi Mountain",
+    "description": "Bicicleta marca Oggi, aro 29, color verde",
+    "code": "te vas a perder",
+    "price": 800,
+    "status": true,
+    "stock": 12,
+    "category": "aro 29"
+}]
