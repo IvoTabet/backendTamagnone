@@ -1,41 +1,92 @@
-[{
+[
+  {
     "title": "Bicicleta Absolute Nero 3",
     "description": "Bicicleta marca Absolute, aro 29, color azul",
     "code": "codigo de la bicicleta?",
     "price": 1000,
     "status": true,
     "stock": 8,
-    "category": "aro 29" 
-},{
+    "category": "aro 29",
+    "id": "5a773bd52c3f2dd2"
+  },
+  {
     "title": "Bicicleta Absolute Nero 5",
     "description": "Bicicleta marca Absolute, aro 29, color negro",
     "code": "no se bien que sería el codigo jajaj",
     "price": 1500,
     "status": true,
     "stock": 15,
-    "category": "aro 29"
-},{
+    "category": "aro 29",
+    "id": "a5391172e350ec5d"
+  },
+  {
     "title": "Bicicleta Oggi wild",
     "description": "Bicicleta marca Oggi, aro 26, color gris",
     "code": "no tiene codigo, es robada",
     "price": 900,
     "status": true,
     "stock": 2,
-    "category": "aro 26"
-},{
+    "category": "aro 26",
+    "id": "32076749e344f019"
+  },
+  {
     "title": "Bicicleta Alfameq Rhino",
     "description": "Bicicleta marca Alfameq, aro 26, color azul",
     "code": "codigo tipazo",
     "price": 1300,
     "status": true,
     "stock": 7,
-    "category": "aro 26"
-},{
+    "category": "aro 26",
+    "id": "cf0435c2c44dba7e"
+  },
+  {
     "title": "Bicicleta Oggi Mountain",
     "description": "Bicicleta marca Oggi, aro 29, color verde",
     "code": "te vas a perder",
     "price": 800,
     "status": true,
-    "stock": 12,
+    "stock": 20,
+    "category": "aro 29",
+    "id": "3ea4f9d1e557757c"
+  },
+  {
+    "id": "0cb5051628ebc7c2",
+    "title": "Bicicleta Robada",
+    "description": "Bicicleta sin marca, aro 24, negro",
+    "price": 500,
+    "stock": 1,
+    "code": "no tiene",
+    "status": true,
+    "category": "aro 24"
+  },
+  {
+    "id": "c192e5e92974b57d",
+    "title": "Bicicleta BMX",
+    "description": "Bicicleta BMX, color verde, aro 24",
+    "price": 750,
+    "stock": 7,
+    "code": "no se",
+    "status": true,
+    "category": "aro 24"
+  },
+  {
+    "id": "f57dba372d091a9c",
+    "title": "Bicicleta Nero 3",
+    "description": "Bicicleta aro 29, color azul",
+    "price": 10000,
+    "stock": 5,
+    "code": "codigo",
+    "status": false,
     "category": "aro 29"
-}]
+  },
+  {
+    "id": "410a48f92c87dba1",
+    "title": "Bike Big Britain",
+    "description": "Bike que se percibe inglesa (no salta)",
+    "price": 500,
+    "stock": 20,
+    "code": "checking",
+    "status": false,
+    "category": "aro 29"
+  }
+]

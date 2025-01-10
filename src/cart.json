@@ -1,1 +1,31 @@
-[] 
+[
+  {
+    "id": "3975c2a4a56ee477",
+    "products": [
+      {
+        "product": "5a773bd52c3f2dd2",
+        "quantity": 3
+      },
+      {
+        "product": "cf0435c2c44dba7e",
+        "quantity": 5
+      },
+      {
+        "product": "0cb5051628ebc7c2",
+        "quantity": 1
+      },
+      {
+        "product": "c192e5e92974b57d",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "id": "daebd27f16e27012",
+    "products": []
+  },
+  {
+    "id": "bcaad76c313fe47b",
+    "products": []
+  }
+]

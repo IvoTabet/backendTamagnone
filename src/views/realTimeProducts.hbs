@@ -1,0 +1,10 @@
+<div>
+    <p>lista de productos abajo, esta se debería actualizar creo</p>
+    <ul id="productsRlTmList">
+        {{#each products}}
+            <li>Nombre del producto: {{title}} - Precio: {{price}}</li>
+        {{/each}}
+    </ul>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/index.js"></script>
