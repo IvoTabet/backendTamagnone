@@ -1,11 +1,17 @@
 <div>
     <h2>Bienvenido, aqui puede comprar distintos tipos de bicicleta</h2>
+    <form id="formCartID">
+        <input type="text" placeholder="Ingrese el ID de su carrito" id="cartID">
+        <button type="submit">ingresar a mi carrito</button>
+    </form>
     <div class="prodsCardContainer">
         {{#each inheritedProd}}
         <div class="prodsCard">
             <h2>{{title}}</h2>
             <p>R${{price}}</p>
-            <p>{{description}}</p>
+            <p>{{description}}</p>            
+            <button type="click" class="btnAddCart" id={{id}}>Agregar al carrito</button>
+            
         </div>
             
         {{/each}}
@@ -20,3 +26,5 @@
         <a href="/?page={{inc currentPage}}">Siguiente</a>
     {{/if}}
 </div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/home.js"></script>

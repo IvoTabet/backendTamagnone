@@ -32,7 +32,7 @@ const hbs = exphbs.create({
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'src', 'views'))
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', routerViews(ioServer))
 app.use('/api/products', productsRouter(ioServer))

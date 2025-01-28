@@ -1,11 +1,14 @@
 import { Router } from "express";
 import fs from 'fs'
 import { productsModel } from "../models/products.model.js"
-import Handlebars from "handlebars";
+import { cartsModel } from "../models/carts.model.js";
+import { ObjectId } from "mongodb";
+import mongoose from "mongoose";
+import { title } from "process";
 
 const routerViews = Router()
 let products = []
-
+let cartID = undefined
 const saveProductsToFile = () => {
     fs.writeFile('src/products.json', JSON.stringify(products, null, 2), (err) => {
         if (err) {
@@ -42,9 +45,25 @@ const viewsRouter = (ioServer) =>{
                 code: elem.code,
                 status: elem.status,
                 stock: elem.stock,
-                category: elem.category
+                category: elem.category,
+                id: elem._id
             }))
-            res.render('home', { inheritedProd, pageTitle: 'home', totalPages: result.totalPages, currentPage: result.page });
+
+            ioServer.on('connection', socket=>{
+                socket.on('getCartID', data=>{
+                    cartID = data
+                    console.log('id recibido desde el server', cartID);
+                })
+            })
+            
+            console.log(cartID)            
+            res.render('home', { 
+                inheritedProd, 
+                pageTitle: 'home', 
+                totalPages: result.totalPages, 
+                currentPage: result.page,
+                cartID: cartID
+            });
         } catch (error) {
             console.log(error);
             
@@ -53,7 +72,6 @@ const viewsRouter = (ioServer) =>{
     });
 
     routerViews.get('/realtimeproducts', async (req, res)=>{
-        //await fetchData();
         products = await productsModel.find()
         const inheritedProd = products.map(elem => ({
             title: elem.title,
@@ -66,6 +84,29 @@ const viewsRouter = (ioServer) =>{
         }))
         res.render('realTimeProducts', {inheritedProd, pageTitle: 'Lista de Prods'})
     })
+
+    routerViews.get('/carts/:cid', async (req, res) => {
+        const IDCart = req.params.cid;
+        console.log('IDCart recibido:', IDCart);
+
+        try {
+            const thisCart = await cartsModel.findById(IDCart).populate('products.producto');
+            const inheritedCart = thisCart.products.map(elem =>({
+                title: elem.producto.title, 
+                price: elem.producto.price,
+                quantity: elem.cantidad
+            }))
+            if (!thisCart) {
+                return res.status(404).send('Carrito no encontrado');
+            }
+            console.log(inheritedCart);
+            
+            res.render('carts', { prods: inheritedCart, pageTitle: 'Carrito' });
+        } catch (error) {
+            console.error('Error al obtener el carrito:', error);
+            res.status(500).send('Error al obtener el carrito');
+        }
+    });
 
     return routerViews
 }
