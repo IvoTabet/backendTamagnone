@@ -33,8 +33,9 @@ const viewsRouter = (ioServer) =>{
     routerViews.get('/', async (req, res) => {
         try {
             //await fetchData();
-            products = await productsModel.find()
-            const inheritedProd = products.map(elem => ({
+            const {limit, page} = req.query
+            const result = await productsModel.paginate({},{limit: limit || 10, page: page || 1})
+            const inheritedProd = result.docs.map(elem => ({
                 title: elem.title,
                 price: elem.price,
                 description: elem.description,
@@ -43,9 +44,11 @@ const viewsRouter = (ioServer) =>{
                 stock: elem.stock,
                 category: elem.category
             }))
-            res.render('home', { inheritedProd, pageTitle: 'home' });
+            res.render('home', { inheritedProd, pageTitle: 'home', totalPages: result.totalPages, currentPage: result.page });
         } catch (error) {
-            res.status(500).send(error);
+            console.log(error);
+            
+            res.status(500).send('error');
         }
     });
 

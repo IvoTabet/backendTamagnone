@@ -9,7 +9,7 @@ import routerViews from './routes/views.router.js'
 import { Server } from 'socket.io'
 import { PRD } from './managers/manager.js'
 import connectionMongo from './connection/mongo.js'
-
+import exphbs from 'express-handlebars'
 
 
 const app = express()
@@ -25,7 +25,11 @@ const ioServer = new Server(HTTPServer)
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-app.engine('hbs', handlebars.engine({extname: '.hbs'}))
+const hbs = exphbs.create({
+    extname: '.hbs'
+})
+
+app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'src', 'views'))
 app.use(express.static(__dirname + '/public'))
@@ -34,7 +38,22 @@ app.use('/', routerViews(ioServer))
 app.use('/api/products', productsRouter(ioServer))
 app.use('/api/carts', routerCart)
 
+// Registrar helpers
+hbs.handlebars.registerHelper('gt', function(a, b) {
+    return a > b;
+});
 
+hbs.handlebars.registerHelper('lt', function(a, b) {
+    return a < b;
+});
+
+hbs.handlebars.registerHelper('dec', function(value) {
+    return value - 1;
+});
+
+hbs.handlebars.registerHelper('inc', function(value) {
+    return value + 1;
+});
 
 ioServer.on('connection', socket =>{
     

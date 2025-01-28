@@ -1,0 +1,12 @@
+.prodsCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 2px solid black;
+}
+
+.prodsCard{
+    width: 500px;
+    border: solid 2px black;
+    margin: 5px;
+}
