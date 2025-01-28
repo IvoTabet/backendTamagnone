@@ -22,7 +22,12 @@
   },
   {
     "id": "daebd27f16e27012",
-    "products": []
+    "products": [
+      {
+        "product": "b407eb8f21ffb5c9",
+        "quantity": 1
+      }
+    ]
   },
   {
     "id": "bcaad76c313fe47b",

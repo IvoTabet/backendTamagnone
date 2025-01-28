@@ -1,8 +1,17 @@
 <div>
+    <form id="creatingProdForm" style="padding: 15px; display: flex; flex-direction:column; width: 50%">
+        <input type="text" placeholder="Product name" id="prodName">
+        <input type="text" placeholder="Product description" id="prodDesc">
+        <input type="text" placeholder="Product code" id="prodCode">
+        <input type="text" placeholder="Product price" id="prodPrice">
+        <input type="text" placeholder="Product stock" id="prodStock">
+        <input type="text" placeholder="Product category" id="prodCategory">
+        <button type="submit" id="submitBTN">Crear Producto</button>
+    </form>
     <p>lista de productos abajo, esta se debería actualizar creo</p>
     <ul id="productsRlTmList">
-        {{#each products}}
-            <li>Nombre del producto: {{title}} - Precio: {{price}}</li>
+        {{#each inheritedProd}}
+            <li>Nombre del producto: {{title}} - Descripción: {{description}} - Precio: {{price}}</li>
         {{/each}}
     </ul>
 </div>

@@ -2,7 +2,7 @@
   {
     "title": "Bicicleta Absolute Nero 3",
     "description": "Bicicleta marca Absolute, aro 29, color azul",
-    "code": "codigo de la bicicleta?",
+    "code": "codigo de la bicicleta!!!!!",
     "price": 1000,
     "status": true,
     "stock": 8,
@@ -88,5 +88,77 @@
     "code": "checking",
     "status": false,
     "category": "aro 29"
+  },
+  {
+    "id": "b407eb8f21ffb5c9",
+    "title": "Bici-Cletus",
+    "description": "La bici de Cletus, el de los simpsons",
+    "price": 1,
+    "stock": 1,
+    "code": "tiene como 30 hijos",
+    "status": true,
+    "category": "aro 26"
+  },
+  {
+    "title": "Bicicleta De Testeo",
+    "description": "Probando si funciona",
+    "code": "codigo azul",
+    "status": true,
+    "stock": "5",
+    "price": "500",
+    "category": "aro 26"
+  },
+  {
+    "title": "COSAS",
+    "description": "DEL MUNDO",
+    "code": "codigo rojo",
+    "status": true,
+    "stock": "5",
+    "price": "1532456789",
+    "category": "aro 26"
+  },
+  {
+    "title": "Bicicleta JET",
+    "description": "asdfdgfPF",
+    "code": "NDVSFO",
+    "price": 8000,
+    "status": true,
+    "stock": 7,
+    "category": "aro 29",
+    "_id": "67928d2db8e5a77d1946fa11",
+    "__v": 0
+  },
+  {
+    "title": "Bicicleta odwjabep",
+    "description": "asdfdgfPF",
+    "code": "NDVSFO",
+    "price": 8000,
+    "status": true,
+    "stock": 7,
+    "category": "aro 26",
+    "_id": "6795370b9a18eb09d366523a",
+    "__v": 0
+  },
+  {
+    "title": "Bicicletagggggggggggp",
+    "description": "wwwwwwwwwwwwwb",
+    "code": "aaaaaaaaaaaaaaaaa",
+    "price": "123",
+    "status": true,
+    "stock": "2",
+    "category": "aro 26",
+    "_id": "6795372f9a18eb09d366523d",
+    "__v": 0
+  },
+  {
+    "title": "Bicicleta Absolute Nero 3",
+    "description": "Bicicleta marca Absolute, aro 29, color azul",
+    "code": "codigo de la bicicleta?",
+    "price": 1000,
+    "status": true,
+    "stock": 8,
+    "category": "aro 29",
+    "_id": "67955fb5b9ceeedb6cb6a3a3",
+    "__v": 0
   }
 ]
